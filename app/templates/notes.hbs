@@ -1,10 +1,10 @@
 <div class="notes">
   <ul class="left-sidebar">
-    {{#each model as |note|}}
-      {{#link-to "notes.show" note tagName="li"}}
-        {{link-to note.title "notes.show" note}}
-      {{/link-to}}
-    {{/each}}
+    <li {{action "createNote"}}>
+      &plus; New note
+    </li>
+
+    {{note-list notes=model}}
   </ul>
 
   <div class="main-content">
