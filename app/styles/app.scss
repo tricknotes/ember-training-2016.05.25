@@ -1,13 +1,61 @@
+$theme-color: hsla(100, 80%, 50%, 0.5);
+$text-color: #333;
+$active-color: white;
+
+html, body {
+  height: 100%;
+  color: $text-color;
+}
+
+a {
+  color: $text-color;
+}
+
+.ember-application {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  & > .ember-view {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+header {
+  background-color: $theme-color;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .notes {
   display: flex;
-  flex: 1;
+  height: 100%;
 }
 
 .left-sidebar {
   list-style-type: none;
-  padding: 1em;
+  padding: 0;
   margin: 0;
   width: 20%;
+  overflow-y: scroll;
+
+  background-color: $theme-color;
+
+  li {
+    padding: 1em;
+    cursor: pointer;
+
+    &.active {
+      background-color: $active-color;
+    }
+  }
 }
 
 .main-content {

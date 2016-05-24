@@ -1,9 +1,9 @@
 <div class="notes">
   <ul class="left-sidebar">
     {{#each model as |note|}}
-      <li>
+      {{#link-to "notes.show" note tagName="li"}}
         {{link-to note.title "notes.show" note}}
-      </li>
+      {{/link-to}}
     {{/each}}
   </ul>
 
