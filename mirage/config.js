@@ -5,5 +5,11 @@ export default function() {
 
   this.get('notes');
   this.get('notes/:id');
-  this.post('notes');
+  this.post('notes', (schema, request) => {
+    let params = JSON.parse(request.requestBody);
+
+    params.created_at = new Date();
+
+    return schema.notes.create(params);
+  });
 }
