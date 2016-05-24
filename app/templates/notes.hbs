@@ -1,9 +1,13 @@
-<ul>
-  {{#each model as |note|}}
-    <li>
-      {{link-to note.title "notes.show" note}}
-    </li>
-  {{/each}}
-</ul>
+<div class="notes">
+  <ul class="left-sidebar">
+    {{#each model as |note|}}
+      <li>
+        {{link-to note.title "notes.show" note}}
+      </li>
+    {{/each}}
+  </ul>
 
-{{outlet}}
+  <div class="main-content">
+    {{outlet}}
+  </div>
+</div>

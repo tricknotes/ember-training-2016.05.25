@@ -1,0 +1,15 @@
+.notes {
+  display: flex;
+  flex: 1;
+}
+
+.left-sidebar {
+  list-style-type: none;
+  padding: 1em;
+  margin: 0;
+  width: 20%;
+}
+
+.main-content {
+  width: 80%;
+}
