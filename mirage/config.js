@@ -12,4 +12,5 @@ export default function() {
 
     return schema.notes.create(params);
   });
+  this.patch('notes/:id');
 }

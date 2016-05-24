@@ -1,5 +1,5 @@
 {{#each orderedNotes key="@index" as |note|}}
-  {{#link-to "notes.show" note tagName="li"}}
-    {{link-to note.title "notes.show" note}}
+  {{#link-to "notes.note" note tagName="li"}}
+    {{link-to note.title "notes.note" note}}
   {{/link-to}}
 {{/each}}
