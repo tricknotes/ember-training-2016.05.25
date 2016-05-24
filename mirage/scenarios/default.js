@@ -1,3 +1,3 @@
 export default function(server) {
-  server.createList('note', 3);
+  server.createList('note', 15);
 }
