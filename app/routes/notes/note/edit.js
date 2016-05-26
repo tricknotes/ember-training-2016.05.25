@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  notify: Ember.inject.service(),
+
   setupController: function(controller, model) {
     this._super(...arguments);
 
@@ -17,6 +19,8 @@ export default Ember.Route.extend({
 
       note.setProperties(params);
       note.save().then(() => {
+        this.get('notify').success('Note updated.');
+
         this.transitionTo('notes.note.index', note);
       });
     }

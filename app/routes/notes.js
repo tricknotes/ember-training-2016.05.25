@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  notify: Ember.inject.service(),
+
   model() {
     return this.store.findAll('note');
   },
@@ -12,6 +14,8 @@ export default Ember.Route.extend({
       });
 
       note.save().then(() => {
+        this.get('notify').success('Note created.');
+
         this.transitionTo('notes.note', note);
       });
     }
