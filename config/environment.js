@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-training',
+    modulePrefix: 'ember-note',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

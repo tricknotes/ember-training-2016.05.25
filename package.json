@@ -1,7 +1,7 @@
 {
-  "name": "ember-training",
+  "name": "ember-note",
   "version": "0.0.0",
-  "description": "Small description for ember-training goes here",
+  "description": "This is a sample Ember application for ember training.",
   "private": true,
   "directories": {
     "doc": "doc",
